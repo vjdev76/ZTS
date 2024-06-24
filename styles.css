@@ -550,15 +550,15 @@ section.container-fluid {
 
   .navbar-toggler:focus {
     box-shadow: none;
-  }  
-  .whatsapp-button {   
-    right: 60px;    
-  }
+  }    
 }
 
 @media (min-width: 768px) {
   .navbar-brand img {
     margin-left: 3rem;
+  }
+  .whatsapp-button {   
+    right: 60px;    
   }
 }
 
