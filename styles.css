@@ -106,9 +106,7 @@ section.container-fluid {
 .logo-container {
   position: relative;
   text-align: center;
-  color: white;
-  width: 300px; 
-  height: 300px; 
+  color: white;  
   overflow: hidden; 
 }
 .logo-container img {
@@ -186,12 +184,12 @@ section.container-fluid {
 .custom-service-card-left .custom-image-container,
 .custom-service-card-right .custom-image-container {
   position: relative;
-  overflow: visible; /* Cambiado a visible para permitir que la imagen sobresalga */
+  overflow: visible; 
 }
 
 .custom-service-card-left .custom-image-container img,
 .custom-service-card-right .custom-image-container img {
-  width: 100%; /* Ajustado para ocupar todo el ancho del contenedor */
+  width: 100%; 
   height: auto;
   position: relative;
   top: -30px;
