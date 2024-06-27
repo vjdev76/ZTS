@@ -34,10 +34,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['name']) && isset($_POS
     $headers .= "Content-type: text/html; charset=UTF-8\r\n";
 
     // Adjunta el archivo CV al correo
-    $adjunto = chunk_split(base64_encode(file_get_contents($temp_cv)));
-    $headers .= "Content-Type: application/octet-stream; name=\"" . $archivo_cv . "\"\r\n";
-    $headers .= "Content-Transfer-Encoding: base64\r\n";
-    $headers .= "Content-Disposition: attachment; filename=\"" . $archivo_cv . "\"\r\n";
+    if (is_uploaded_file($temp_cv)) {
+        $adjunto = chunk_split(base64_encode(file_get_contents($temp_cv)));
+        $headers .= "Content-Type: application/octet-stream; name=\"" . $archivo_cv . "\"\r\n";
+        $headers .= "Content-Transfer-Encoding: base64\r\n";
+        $headers .= "Content-Disposition: attachment; filename=\"" . $archivo_cv . "\"\r\n";
+    } else {
+        echo '<div class="alert alert-danger">Error al adjuntar el archivo.</div>';
+        exit;
+    }
 
     // Dirección del remitente
     $headers .= "From: $nombre <$correo>\r\n";
@@ -55,6 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['name']) && isset($_POS
 }
 
 ?>
+
 
 
 
