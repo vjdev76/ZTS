@@ -196,13 +196,6 @@ section.container-fluid {
   border-radius: 8px;
 }
 
-.custom-service-card-left .custom-image-container img {
-  left: -70px; /* Ajuste específico para la tarjeta izquierda */
-}
-
-.custom-service-card-right .custom-image-container img {
-  left: 80px; /* Ajuste específico para la tarjeta derecha */
-}
 
 .header-banner {
   width: 100%;
@@ -558,6 +551,13 @@ section.container-fluid {
   .whatsapp-button {   
     right: 60px;    
   }
+  .custom-service-card-left .custom-image-container img {
+    left: -70px; 
+  }
+  
+  .custom-service-card-right .custom-image-container img {
+    left: 80px; 
+  }  
 }
 
 .join-team {
