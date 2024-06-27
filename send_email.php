@@ -16,7 +16,7 @@ try {
         $temp_cv = isset($_FILES['cv']['tmp_name']) ? $_FILES['cv']['tmp_name'] : '';
 
         // Dirección de correo a la que se enviará el formulario
-        $destinatario = "flaviozanitti@zts.com.ar";
+        $destinatario = "dardoleguizamon@gmail.com";
 
         // Asunto del correo
         $asunto = "CV enviado por la web";
